@@ -1,3 +1,8 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
 img#piano-img {
   object-fit: cover;
   width: 100%;
@@ -5,7 +10,46 @@ img#piano-img {
 }
 
 .frame {
-  width: 700px;
+  width: 30%;
   height: 100vh;
   overflow: hidden;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-left: 5rem;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 40%, 0.2);
+  border-radius: 10px;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: 0.25rem;
+}
+
+.input-row {
+  display: flex;
+}
+
+button {
+  margin-top: 5rem;
+  background-color: hsl(0, 0%, 40%, 0.1);
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
 }
