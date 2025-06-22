@@ -1,6 +1,15 @@
+:root {
+  --gray: hsla(0, 0%, 40%, 0.2);
+}
+
 html {
   font-size: 10px;
   box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  align-items: center;
 }
 
 img#piano-img {
@@ -15,24 +24,28 @@ img#piano-img {
   overflow: hidden;
 }
 
-#container {
-  display: flex;
-  align-items: center;
+main {
+  margin-left: 5rem;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin-left: 5rem;
+input {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  font-size: 1.5rem;
 }
 
 .form-inputs {
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  box-shadow: 10px 10px 10px hsla(0, 0%, 40%, 0.2);
+  box-shadow: 10px 10px 10px var(--gray);
   border-radius: 10px;
+  flex-grow: 1;
+}
+
+.input-row {
+  display: flex;
+  gap: 2rem;
 }
 
 .input-block {
@@ -40,10 +53,6 @@ main {
   flex-direction: column;
   margin: 1rem 0;
   gap: 0.25rem;
-}
-
-.input-row {
-  display: flex;
 }
 
 button {
