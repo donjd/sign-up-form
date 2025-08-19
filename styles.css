@@ -7,6 +7,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(255, 255, 255);
+}
+
 #container {
   display: flex;
   align-items: center;
