@@ -1,9 +1,20 @@
+:root {
+  --accent-color-1: rgb(136, 72, 253);
+  --accent-color-2: rgb(255, 94, 0);
+}
+
 html {
   font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 h2 {
-  color: rgb(255, 94, 0);
+  color: var(--accent-color-1);
 }
 
 header {
@@ -30,7 +41,7 @@ header {
 }
 
 .logo {
-  margin: 0px auto 0px 10px;
+  margin: 0px auto 0px 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
@@ -39,4 +50,53 @@ header {
 .menu-line {
   background-color: black;
   height: 2px;
+}
+
+.image {
+  width: clamp(200px, 50vw, 300px);
+  height: clamp(200px, 50vw, 300px);
+  background-color: var(--accent-color-1);
+  border-radius: 10px;
+  margin: 40px 0 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  margin: 0 20px 0 20px;
+}
+
+section.description {
+  /* margin: 20px; */
+}
+
+button {
+  width: 75%;
+  height: 4rem;
+  margin: 6px 0 6px 0;
+  background-color: white;
+  border: 2px solid var(--accent-color-1);
+  border-radius: 5px;
+}
+
+button:active {
+  background-color: var(--accent-color-1);
+  color: white;
+}
+
+a {
+  color: var(--accent-color-1);
+  text-decoration: none;
+  margin: 10px;
+}
+
+footer {
+  font-size: 1rem;
+  margin: 50px 30px 0 30px;
+}
+
+* {
+  /* border: 1px solid red; */
 }
