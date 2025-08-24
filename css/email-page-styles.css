@@ -1,1 +1,15 @@
 @import url(styles.css);
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 40px 40px 40px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px hsl(0, 0%, 79%);
+}
+
+input {
+  font-size: inherit;
+  margin: 10px 0 10px 0;
+  border: none;
+}
