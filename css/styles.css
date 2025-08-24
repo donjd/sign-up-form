@@ -42,6 +42,13 @@ header {
   justify-content: space-between;
 }
 
+.logo {
+  margin: 0px auto 0px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
 .profile-icon {
   width: 2em;
   height: 2em;
@@ -62,17 +69,23 @@ header {
   margin: 40px 0 20px 0;
 }
 
-button {
+a.btn-link {
   height: 4rem;
   margin: 6px 0 6px 0;
   background-color: white;
   border: 2px solid var(--accent-color-1);
   border-radius: 5px;
+  padding: 10px 20px 0 20px;
+  text-align: center;
 }
 
-button:active {
+a.btn-link:active {
   background-color: var(--accent-color-1);
   color: white;
+}
+
+a.btn-link:visited {
+  color: var(--accent-color-1);
 }
 
 a {
