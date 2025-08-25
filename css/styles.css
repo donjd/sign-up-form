@@ -90,7 +90,7 @@ a.btn-link:visited {
 }
 
 a {
-  color: var(--accent-color-1);
+  color: var(--accent-color-2);
   text-decoration: none;
   margin: 10px;
 }
@@ -98,4 +98,8 @@ a {
 footer {
   font-size: 1.2rem;
   margin-top: auto;
+}
+
+.accent-2 {
+  color: var(--accent-color-2);
 }
