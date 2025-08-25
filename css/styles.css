@@ -1,5 +1,6 @@
 :root {
   --accent-color-1: rgb(136, 72, 253);
+  --accent-color-1-fade: rgba(136, 72, 253, 50%);
   --accent-color-2: rgb(255, 94, 0);
 }
 
@@ -96,5 +97,5 @@ a {
 
 footer {
   font-size: 1.2rem;
-  margin: auto 10px 0 10px;
+  margin-top: auto;
 }
