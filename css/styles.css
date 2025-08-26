@@ -71,13 +71,14 @@ header {
 }
 
 a.btn-link {
-  height: 4rem;
+  min-height: 4rem;
   margin: 6px 0 6px 0;
   background-color: white;
   border: 2px solid var(--accent-color-1);
   border-radius: 5px;
-  padding: 10px 20px 0 20px;
+  padding: 10px 20px 10px 20px;
   text-align: center;
+  line-height: 4rem;
 }
 
 a.btn-link:active {
@@ -90,13 +91,14 @@ a.btn-link:visited {
 }
 
 a {
-  color: var(--accent-color-2);
+  color: var(--accent-color-1);
   text-decoration: none;
   margin: 10px;
 }
 
 footer {
   font-size: 1.2rem;
+  margin: 20px;
   margin-top: auto;
 }
 
