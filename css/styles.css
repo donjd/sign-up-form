@@ -36,6 +36,7 @@ header {
 
 .menu-icon {
   width: 18px;
+  min-width: 18px;
   height: 12px;
   /* border: 1px solid red; */
   display: flex;
@@ -51,8 +52,9 @@ header {
 }
 
 .profile-icon {
-  width: 2em;
-  height: 2em;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
   border: 3px solid black;
   border-radius: 30px;
 }
