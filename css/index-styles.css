@@ -13,12 +13,11 @@ main {
   height: clamp(200px, 50vw, 300px);
   background-color: var(--accent-color-1);
   border-radius: 10px;
-  margin: 40px 0 20px 0;
-  margin: 60px 0 60px 0;
+  margin: 40px;
 }
 
-.description {
-  margin-bottom: 40px;
+main h2 {
+  margin: 20px;
 }
 
 .buttons {
@@ -29,13 +28,14 @@ main {
 
 a.btn-link {
   min-height: 4rem;
-  margin: 6px 0 6px 0;
   background-color: white;
-  border: 2px solid var(--accent-color-1);
+  border-top: 2px solid var(--accent-color-1-fade);
+  border-left: 2px solid var(--accent-color-1-fade);
   border-radius: 5px;
   padding: 10px 20px 10px 20px;
   text-align: center;
   line-height: 4rem;
+  box-shadow: 5px 5px 5px var(--accent-color-1-fade);
 }
 
 a.btn-link:hover {
@@ -46,4 +46,16 @@ a.btn-link:hover {
 a.btn-link:active {
   background-color: var(--accent-color-1-fade);
   color: white;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-rule {
+  border: 1px solid var(--accent-color-1);
+  flex: 1 1 auto;
+  height: 0;
+  margin: 20px 0 20px 0;
 }

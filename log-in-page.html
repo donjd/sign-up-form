@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/email-page-styles.css" />
+    <link rel="stylesheet" href="css/log-in-page-styles.css" />
   </head>
   <body>
     <header>
@@ -13,18 +13,21 @@
         <div class="menu-line"></div>
         <div class="menu-line"></div>
       </div>
-      <div class="logo">d<span class="accent-2">on</span>jd</div>
+      <div class="logo">d<span class="accent-1">on</span>jd</div>
       <div class="profile-icon"></div>
     </header>
     <main>
-      <div class="sign-up-container">
-        <form action="post">
-          <input type="text" placeholder="Type email" />
-          <input type="password" placeholder="Type password" />
-          <input type="password" placeholder="Type password again" />
-        </form>
-        <a href="index.html" class="back-btn">Go back</a>
-      </div>
+      <form>
+        <h2 class="form-title">Welcome back</h2>
+        <section class="inputs">
+          <input type="text" placeholder="Enter email" />
+          <input type="password" placeholder="Enter password" />
+        </section>
+        <section class="buttons">
+          <a href="index.html" class="back-btn btn">Go back</a>
+          <button type="submit">Log in</button>
+        </section>
+      </form>
     </main>
     <footer>
       By signing up, you accept our terms of use and privacy policy.

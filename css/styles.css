@@ -1,6 +1,6 @@
 :root {
   --accent-color-1: rgb(136, 72, 253);
-  --accent-color-1-fade: rgba(136, 72, 253, 50%);
+  --accent-color-1-fade: rgba(136, 72, 253, 25%);
   --accent-color-2: rgb(255, 94, 0);
 }
 
@@ -10,9 +10,12 @@ html {
   /* touch-action: manipulation; */
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .accent-1 {
@@ -33,6 +36,7 @@ body {
 
 h2 {
   color: var(--accent-color-1);
+  margin: 20px;
 }
 
 header {
@@ -76,6 +80,13 @@ a {
   color: var(--accent-color-1);
   text-decoration: none;
   margin: 10px;
+}
+
+button {
+  color: var(--accent-color-1);
+  background: none;
+  border: none;
+  font: inherit;
 }
 
 footer {
