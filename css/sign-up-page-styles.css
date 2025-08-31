@@ -29,7 +29,7 @@ input:focus {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
