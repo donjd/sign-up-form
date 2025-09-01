@@ -90,6 +90,21 @@ a.logo {
   color: black;
 }
 
+.fa-solid {
+  color: var(--accent-color-1-fade);
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.password-container {
+  position: relative;
+}
+
+hr {
+  border-top: 1px solid var(--accent-color-1-fade);
+}
+
 button {
   color: var(--accent-color-1);
   background: none;

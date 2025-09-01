@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/log-in-page-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -13,7 +20,9 @@
         <div class="menu-line"></div>
         <div class="menu-line"></div>
       </div>
-      <div class="logo">d<span class="accent-1">on</span>jd</div>
+      <a class="logo" href="index.html">
+        d<span class="accent-1">on</span>jd
+      </a>
       <div class="profile-icon"></div>
     </header>
     <main>
@@ -21,7 +30,11 @@
         <h2 class="form-title">Welcome back</h2>
         <section class="inputs">
           <input type="text" placeholder="Enter email" />
-          <input type="password" placeholder="Enter password" />
+          <hr />
+          <div class="password-container">
+            <input type="password" placeholder="Enter password" />
+            <i class="fa-solid fa-eye"></i>
+          </div>
         </section>
         <section class="buttons">
           <a href="index.html" class="back-btn btn">Go back</a>
