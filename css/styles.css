@@ -18,14 +18,6 @@ html {
   box-sizing: border-box;
 }
 
-span.accent-1 {
-  color: var(--accent-color-1);
-}
-
-.accent-2 {
-  color: var(--accent-color-2);
-}
-
 body {
   font-size: 1.6rem;
   line-height: 1.5;
@@ -94,7 +86,7 @@ a.logo {
   color: var(--accent-color-1-fade);
   position: absolute;
   right: 10px;
-  top: 5px;
+  top: 7px;
 }
 
 .password-container {
@@ -121,4 +113,17 @@ footer {
 ul {
   display: flex;
   flex-direction: column;
+}
+
+/* Overriding class styling*/
+.accent-1 {
+  color: var(--accent-color-1);
+}
+
+.accent-1-fade {
+  color: var(--accent-color-1-fade);
+}
+
+.accent-2 {
+  color: var(--accent-color-2);
 }
