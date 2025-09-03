@@ -30,19 +30,23 @@
       <form>
         <h2 class="form-title">Create a new account</h2>
         <section class="inputs">
-          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="First name" name="first-name" />
           <hr />
-          <input type="text" placeholder="Last name" />
+          <input type="text" placeholder="Last name" name="last-name" />
           <hr />
-          <input type="email" placeholder="Email" />
+          <input type="email" placeholder="Email" name="email" />
           <hr />
           <div class="password-container">
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" name="password" />
             <i class="fa-solid fa-eye"></i>
           </div>
           <hr />
           <div class="password-container">
-            <input type="password" placeholder="Confirm password" />
+            <input
+              type="password"
+              placeholder="Confirm password"
+              name="password-confirmation"
+            />
             <i class="fa-solid fa-eye"></i>
           </div>
         </section>
@@ -52,8 +56,5 @@
         </section>
       </form>
     </main>
-    <footer>
-      By signing up, you accept our terms of use and privacy policy.
-    </footer>
   </body>
 </html>

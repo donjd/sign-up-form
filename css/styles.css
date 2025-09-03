@@ -2,6 +2,7 @@
   --accent-color-1: rgb(136, 72, 253);
   --accent-color-1-fade: rgba(136, 72, 253, 25%);
   --accent-color-2: rgb(255, 94, 0);
+  --header-height: 70px;
 }
 
 html {
@@ -40,6 +41,7 @@ header {
   top: 0;
   z-index: 1000;
   background-color: white;
+  height: var(--header-height);
 }
 
 .menu-icon {
@@ -61,15 +63,15 @@ header {
   margin: 0px auto 0px 30px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 20px;
 }
 
 .profile-icon {
-  width: 30px;
-  min-width: 30px;
-  height: 30px;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
   border: 3px solid black;
-  border-radius: 30px;
+  border-radius: 12.5px;
 }
 
 a {
@@ -102,12 +104,6 @@ button {
   background: none;
   border: none;
   font: inherit;
-}
-
-footer {
-  font-size: 1.2rem;
-  margin: 20px;
-  margin-top: auto;
 }
 
 ul {

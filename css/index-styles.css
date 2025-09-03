@@ -8,6 +8,14 @@ main {
   margin: 0 20px 0 20px;
 }
 
+.content {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .image {
   width: clamp(200px, 50vw, 300px);
   height: clamp(200px, 50vw, 300px);
@@ -58,4 +66,25 @@ a.btn-link:active {
   flex: 1 1 auto;
   height: 0;
   margin: 20px 0 20px 0;
+}
+
+@media (min-width: 1000px) {
+  main {
+    flex-direction: row;
+    height: calc(100vh - var(--header-height));
+    margin-left: 0;
+  }
+
+  .image {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    width: 50vw;
+  }
+}
+
+main {
+  /* border: 1px solid red; */
 }

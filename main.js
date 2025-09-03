@@ -19,3 +19,9 @@ eyeIcons.forEach((eyeIcon, i) => {
     togglePasswordVisibility(passwordInputs[i]);
   });
 });
+
+eyeIcons.forEach((eyeIcon) => {
+  eyeIcon.addEventListener("click", (e) => {
+    console.log(e);
+  });
+});
