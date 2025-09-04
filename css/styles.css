@@ -2,6 +2,8 @@
   --accent-color-1: rgb(136, 72, 253);
   --accent-color-1-fade: rgba(136, 72, 253, 25%);
   --accent-color-2: rgb(255, 94, 0);
+  --invalid-bg-color: rgba(255, 116, 116, 18%);
+  --invalid-text-color: rgb(255, 116, 116);
   --header-height: 70px;
 }
 
@@ -91,6 +93,10 @@ a.logo {
   top: 7px;
 }
 
+.fa-solid:hover {
+  cursor: pointer;
+}
+
 .password-container {
   position: relative;
 }
@@ -104,6 +110,10 @@ button {
   background: none;
   border: none;
   font: inherit;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 ul {
@@ -122,4 +132,15 @@ ul {
 
 .accent-2 {
   color: var(--accent-color-2);
+}
+
+.invalid,
+.invalid::placeholder {
+  color: var(--invalid-text-color);
+}
+
+.invalid,
+.invalid:focus {
+  background-color: var(--invalid-bg-color);
+  outline: none;
 }
