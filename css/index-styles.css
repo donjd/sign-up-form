@@ -17,11 +17,11 @@ main {
 }
 
 .image {
-  width: clamp(200px, 50vw, 300px);
-  height: clamp(200px, 50vw, 300px);
+  /* width: clamp(100px, 50vw, 150px);
+  height: clamp(100px, 50vw, 150px); */
   background-color: var(--accent-color-1);
   border-radius: 10px;
-  margin: 40px;
+  margin: 20px;
 }
 
 main h2 {
@@ -31,7 +31,7 @@ main h2 {
 .buttons {
   display: flex;
   flex-direction: column;
-  width: clamp(100px, 100%, 400px);
+  width: clamp(150px, 75%, 350px);
 }
 
 a.btn-link {
@@ -40,7 +40,7 @@ a.btn-link {
   border-top: 2px solid var(--accent-color-1-fade);
   border-left: 2px solid var(--accent-color-1-fade);
   border-radius: 5px;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 10px;
   text-align: center;
   line-height: 4rem;
   box-shadow: 5px 5px 5px var(--accent-color-1-fade);

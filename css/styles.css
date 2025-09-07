@@ -31,7 +31,8 @@ body {
 
 h2 {
   color: var(--accent-color-1);
-  margin: 20px;
+  /* margin: 20px; */
+  font-size: 20px;
 }
 
 header {
@@ -123,6 +124,7 @@ ul {
 
 /* Overriding class styling*/
 .accent-1 {
+  /* color: red; */
   color: var(--accent-color-1);
 }
 
