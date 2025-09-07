@@ -56,12 +56,14 @@ form.addEventListener("click", (e) => {
       } else {
         removeInvalidClass(lastName);
       }
+
       if (email.value === "" || null) {
         errors.push("Please enter your last name.");
         addInvalidClass(email);
       } else {
         removeInvalidClass(email);
       }
+
       if (password.value === "" || null) {
         errors.push("Please enter a password.");
         addInvalidClass(password);
@@ -72,13 +74,23 @@ form.addEventListener("click", (e) => {
       if (passwordConfirmation.value === "" || null) {
         errors.push("Please confirm password.");
         addInvalidClass(passwordConfirmation);
+      } else if (password.value !== passwordConfirmation.value) {
+        errors.push("Password confirmation must match password.");
+        addInvalidClass(passwordConfirmation);
       } else {
         removeInvalidClass(passwordConfirmation);
       }
 
       if (errors.length > 0) {
+        console.log(errors);
         e.preventDefault();
       }
       break;
+  }
+});
+
+form.addEventListener("input", (e) => {
+  if (e.target.classList.contains("invalid")) {
+    e.target.classList.remove("invalid");
   }
 });
