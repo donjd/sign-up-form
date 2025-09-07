@@ -35,62 +35,108 @@ function removeInvalidClass(e) {
   e.classList.remove("invalid");
 }
 
-form.addEventListener("click", (e) => {
-  let errors = [];
-  switch (true) {
-    case e.target.classList.contains("fa-eye"):
-      toggleEyeColor(e);
-      break;
+function validateLogInForm() {
+  form.addEventListener("click", (e) => {
+    let errors = [];
+    switch (true) {
+      case e.target.classList.contains("fa-eye"):
+        toggleEyeColor(e);
+        break;
 
-    case e.target.type === "submit":
-      if (firstName.value === "" || null) {
-        errors.push("Please enter your first name.");
-        addInvalidClass(firstName);
-      } else {
-        removeInvalidClass(firstName);
-      }
+      case e.target.type === "submit":
+        if (email.value === "" || null) {
+          errors.push("Please enter your email.");
+          addInvalidClass(email);
+        } else {
+          removeInvalidClass(email);
+        }
 
-      if (lastName.value === "" || null) {
-        errors.push("Please enter your last name.");
-        addInvalidClass(lastName);
-      } else {
-        removeInvalidClass(lastName);
-      }
+        if (password.value === "" || null) {
+          errors.push("Please enter your password.");
+          addInvalidClass(password);
+        } else {
+          removeInvalidClass(password);
+        }
 
-      if (email.value === "" || null) {
-        errors.push("Please enter your last name.");
-        addInvalidClass(email);
-      } else {
-        removeInvalidClass(email);
-      }
+        if (errors.length > 0) {
+          console.log(errors);
+          e.preventDefault();
+        }
+        break;
+    }
+  });
 
-      if (password.value === "" || null) {
-        errors.push("Please enter a password.");
-        addInvalidClass(password);
-      } else {
-        removeInvalidClass(password);
-      }
+  form.addEventListener("input", (e) => {
+    if (e.target.classList.contains("invalid")) {
+      e.target.classList.remove("invalid");
+    }
+  });
+}
 
-      if (passwordConfirmation.value === "" || null) {
-        errors.push("Please confirm password.");
-        addInvalidClass(passwordConfirmation);
-      } else if (password.value !== passwordConfirmation.value) {
-        errors.push("Password confirmation must match password.");
-        addInvalidClass(passwordConfirmation);
-      } else {
-        removeInvalidClass(passwordConfirmation);
-      }
+function validateSignUpForm() {
+  form.addEventListener("click", (e) => {
+    let errors = [];
+    switch (true) {
+      case e.target.classList.contains("fa-eye"):
+        toggleEyeColor(e);
+        break;
 
-      if (errors.length > 0) {
-        console.log(errors);
-        e.preventDefault();
-      }
-      break;
-  }
-});
+      case e.target.type === "submit":
+        if (firstName.value === "" || null) {
+          errors.push("Please enter your first name.");
+          addInvalidClass(firstName);
+        } else {
+          removeInvalidClass(firstName);
+        }
 
-form.addEventListener("input", (e) => {
-  if (e.target.classList.contains("invalid")) {
-    e.target.classList.remove("invalid");
-  }
-});
+        if (lastName.value === "" || null) {
+          errors.push("Please enter your last name.");
+          addInvalidClass(lastName);
+        } else {
+          removeInvalidClass(lastName);
+        }
+
+        if (email.value === "" || null) {
+          errors.push("Please enter your email.");
+          addInvalidClass(email);
+        } else {
+          removeInvalidClass(email);
+        }
+
+        if (password.value === "" || null) {
+          errors.push("Please enter a password.");
+          addInvalidClass(password);
+        } else {
+          removeInvalidClass(password);
+        }
+
+        if (passwordConfirmation.value === "" || null) {
+          errors.push("Please confirm password.");
+          addInvalidClass(passwordConfirmation);
+        } else if (password.value !== passwordConfirmation.value) {
+          errors.push("Password confirmation must match password.");
+          addInvalidClass(passwordConfirmation);
+        } else {
+          removeInvalidClass(passwordConfirmation);
+        }
+
+        if (errors.length > 0) {
+          console.log(errors);
+          e.preventDefault();
+        }
+        break;
+    }
+  });
+
+  form.addEventListener("input", (e) => {
+    if (e.target.classList.contains("invalid")) {
+      e.target.classList.remove("invalid");
+    }
+  });
+}
+
+if (firstName) {
+  validateSignUpForm();
+} else {
+  validateLogInForm();
+}
