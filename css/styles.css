@@ -89,12 +89,24 @@ a.logo {
 
 .fa-solid {
   color: var(--accent-color-1-fade);
-  position: absolute;
-  right: 10px;
-  top: 7px;
+
+  /* border: 1px solid red; */
+  /* padding: 5px; */
 }
 
-.fa-solid:hover {
+.eye-container {
+  /* border: 1px solid red; */
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye-container:hover {
   cursor: pointer;
 }
 

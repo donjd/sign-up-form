@@ -15,12 +15,16 @@ function togglePasswordVisibility(passwordType) {
 }
 
 function toggleEyeColor(e) {
+  // const eyeContainer = e.target.closest(
+  //   ".password-visibility-toggle, .password-confirmation-visibility-toggle"
+  // );
+
   switch (true) {
-    case e.target.classList.contains("password-visibility-toggle"):
+    case e.target.closest(".password-visibility-toggle"):
       togglePasswordVisibility(password);
       break;
 
-    case e.target.classList.contains("password-confirmation-visibility-toggle"):
+    case e.target.closest(".password-confirmation-visibility-toggle"):
       togglePasswordVisibility(passwordConfirmation);
       break;
   }
