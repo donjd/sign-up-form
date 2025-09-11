@@ -3,86 +3,87 @@ const lastName = document.querySelector("#last-name");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const passwordConfirmation = document.querySelector("#password-confirmation");
+
 const submitBtn = document.querySelector('button[type="submit"]');
 const form = document.querySelector("form");
 
-function togglePasswordVisibility(passwordType) {
-  if (passwordType.type == "password") {
-    passwordType.setAttribute("type", "text");
-  } else {
-    passwordType.setAttribute("type", "password");
-  }
-}
+// function validateLogInForm() {
+//   form.addEventListener("click", (e) => {
+//     let errors = [];
+//     switch (true) {
+//       case e.target.classList.contains("fa-eye"):
+//         toggleEyeColor(e);
+//         break;
 
-function toggleEyeColor(e) {
-  // const eyeContainer = e.target.closest(
-  //   ".password-visibility-toggle, .password-confirmation-visibility-toggle"
-  // );
+//       case e.target.type === "submit":
+//         if (email.value === "" || null) {
+//           errors.push("Please enter your email.");
+//           addInvalidClass(email);
+//         } else {
+//           removeInvalidClass(email);
+//         }
 
-  switch (true) {
-    case e.target.closest(".password-visibility-toggle"):
-      togglePasswordVisibility(password);
-      break;
+//         if (password.value === "" || null) {
+//           errors.push("Please enter your password.");
+//           addInvalidClass(password);
+//         } else {
+//           removeInvalidClass(password);
+//         }
 
-    case e.target.closest(".password-confirmation-visibility-toggle"):
-      togglePasswordVisibility(passwordConfirmation);
-      break;
-  }
-  e.target.classList.toggle("accent-1");
-}
+//         if (errors.length > 0) {
+//           console.log(errors);
+//           e.preventDefault();
+//         }
+//         break;
+//     }
+//   });
 
-function addInvalidClass(e) {
-  e.classList.add("invalid");
-}
+//   form.addEventListener("input", (e) => {
+//     if (e.target.classList.contains("invalid")) {
+//       e.target.classList.remove("invalid");
+//     }
+//   });
+// }
 
-function removeInvalidClass(e) {
-  e.classList.remove("invalid");
-}
+const passwordVisibilityToggle = document.querySelector(
+  ".password-visibility-toggle"
+);
 
-function validateLogInForm() {
-  form.addEventListener("click", (e) => {
-    let errors = [];
-    switch (true) {
-      case e.target.classList.contains("fa-eye"):
-        toggleEyeColor(e);
-        break;
+const passwordConfirmationVisibilityToggle = document.querySelector(
+  ".password-confirmation-visibility-toggle"
+);
 
-      case e.target.type === "submit":
-        if (email.value === "" || null) {
-          errors.push("Please enter your email.");
-          addInvalidClass(email);
-        } else {
-          removeInvalidClass(email);
-        }
+const passwordEye = document.querySelector(".password-eye");
+const passwordConfirmationEye = document.querySelector(
+  ".password-confirmation-eye"
+);
 
-        if (password.value === "" || null) {
-          errors.push("Please enter your password.");
-          addInvalidClass(password);
-        } else {
-          removeInvalidClass(password);
-        }
-
-        if (errors.length > 0) {
-          console.log(errors);
-          e.preventDefault();
-        }
-        break;
+function togglePasswordVisibility(toggle, passwordType, icon) {
+  toggle.addEventListener("click", (e) => {
+    if (passwordType.type === "password") {
+      passwordType.setAttribute("type", "text");
+    } else {
+      passwordType.setAttribute("type", "password");
     }
-  });
 
-  form.addEventListener("input", (e) => {
-    if (e.target.classList.contains("invalid")) {
-      e.target.classList.remove("invalid");
-    }
+    icon.classList.toggle("accent-1");
   });
 }
+
+togglePasswordVisibility(passwordVisibilityToggle, password, passwordEye);
+togglePasswordVisibility(
+  passwordConfirmationVisibilityToggle,
+  passwordConfirmation,
+  passwordConfirmationEye
+);
 
 function validateSignUpForm() {
   form.addEventListener("click", (e) => {
     let errors = [];
+
     switch (true) {
       case e.target.classList.contains("fa-eye"):
-        toggleEyeColor(e);
+        e.target.classList.toggle("invalid");
         break;
 
       case e.target.type === "submit":

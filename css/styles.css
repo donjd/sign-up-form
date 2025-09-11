@@ -89,13 +89,11 @@ a.logo {
 
 .fa-solid {
   color: var(--accent-color-1-fade);
-
-  /* border: 1px solid red; */
-  /* padding: 5px; */
+  display: inline-block;
 }
 
 .eye-container {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   padding: 10px;
   position: absolute;
   right: 0;
