@@ -32,27 +32,36 @@
         <section class="inputs">
           <input
             type="text"
-            placeholder="First name"
+            placeholder="* First name"
             name="first-name"
             id="first-name"
+            required
           />
           <hr />
           <input
             type="text"
-            placeholder="Last name"
+            placeholder="* Last name"
             name="last-name"
             id="last-name"
+            required
           />
           <hr />
-          <input type="email" placeholder="Email" name="email" id="email" />
+          <input
+            type="email"
+            placeholder="* Email"
+            name="email"
+            id="email"
+            required
+          />
           <hr />
           <div class="password-container initial-password">
             <input
               type="password"
-              placeholder="Password"
+              placeholder="* Password"
               name="password"
               class="password"
               id="password"
+              required
             />
             <button
               type="button"
@@ -65,10 +74,11 @@
           <div class="password-container confirmation">
             <input
               type="password"
-              placeholder="Confirm password"
+              placeholder="* Password confirmation"
               name="password-confirmation"
               class="password-confirmation"
               id="password-confirmation"
+              required
             />
             <button
               type="button"
