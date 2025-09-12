@@ -115,6 +115,13 @@ function validateLogInForm() {
 
 if (firstName) {
   validateSignUpForm();
-} else {
+} else if (!firstName && email) {
   validateLogInForm();
 }
+
+const menu = document.querySelector("#menu");
+const hamburgerMenu = document.querySelector("#hamburger-menu");
+
+hamburgerMenu.addEventListener("click", () => {
+  menu.classList.toggle("hidden-menu");
+});

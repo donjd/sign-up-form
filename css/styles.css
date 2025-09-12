@@ -139,6 +139,31 @@ button:hover {
 ul {
   display: flex;
   flex-direction: column;
+  list-style: none;
+}
+
+aside {
+  position: fixed;
+  background-color: var(--accent-color-1);
+  color: white;
+  top: var(--header-height);
+  width: 200px;
+  height: calc(100vh - var(--header-height));
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  line-height: 2.5;
+  box-shadow: 10px 10px 10px rgba(196, 196, 196, 0.822);
+  z-index: 1000;
+}
+
+aside.hidden-menu {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  aside {
+    width: 90%;
+  }
 }
 
 /* Overriding class styling*/

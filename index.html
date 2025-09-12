@@ -12,11 +12,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="main.js" defer></script>
   </head>
   <body>
+    <aside class="hidden-menu" id="menu">
+      <ul>
+        <li>About me</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </aside>
     <header>
       <button type="button">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" id="hamburger-menu"></i>
       </button>
       <a class="logo" href="index.html">
         d<span class="accent-1">on</span>jd
