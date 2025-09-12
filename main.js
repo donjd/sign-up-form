@@ -30,13 +30,6 @@ function togglePasswordVisibility(toggle, passwordType, icon) {
   });
 }
 
-togglePasswordVisibility(passwordVisibilityToggle, password, passwordEye);
-togglePasswordVisibility(
-  passwordConfirmationVisibilityToggle,
-  passwordConfirmation,
-  passwordConfirmationEye
-);
-
 let errors = [];
 
 function validateInput(inputType) {
@@ -58,7 +51,15 @@ function validatePasswordsMatch() {
 }
 
 function validateSignUpForm() {
-  form.addEventListener("click", (e) => {
+  togglePasswordVisibility(passwordVisibilityToggle, password, passwordEye);
+  togglePasswordVisibility(
+    passwordConfirmationVisibilityToggle,
+    passwordConfirmation,
+    passwordConfirmationEye
+  );
+
+  form.addEventListener("submit", (e) => {
+    errors = [];
     validatePasswordsMatch();
     validateInput(firstName);
     validateInput(lastName);
@@ -69,7 +70,6 @@ function validateSignUpForm() {
     if (errors.length > 0) {
       console.log(errors);
       e.preventDefault();
-      errors = [];
     }
   });
 
@@ -89,7 +89,10 @@ function validateSignUpForm() {
 }
 
 function validateLogInForm() {
-  form.addEventListener("click", (e) => {
+  togglePasswordVisibility(passwordVisibilityToggle, password, passwordEye);
+
+  form.addEventListener("submit", (e) => {
+    errors = [];
     validateInput(email);
     validateInput(password);
 
@@ -97,13 +100,15 @@ function validateLogInForm() {
       console.log(errors);
       e.preventDefault();
     }
-
-    errors = [];
   });
 
   form.addEventListener("input", (e) => {
-    if (e.target.classList.contains("invalid")) {
+    if (
+      e.target.tagName === "INPUT" &&
+      e.target.classList.contains("invalid")
+    ) {
       e.target.classList.remove("invalid");
+      errors = [];
     }
   });
 }

@@ -16,15 +16,13 @@
   </head>
   <body>
     <header>
-      <div class="menu-icon">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-      </div>
+      <button type="button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <a class="logo" href="index.html">
         d<span class="accent-1">on</span>jd
       </a>
-      <div class="profile-icon"></div>
+      <button type="button"><i class="fa-solid fa-circle-user"></i></button>
     </header>
     <main>
       <form>
@@ -32,36 +30,27 @@
         <section class="inputs">
           <input
             type="text"
-            placeholder="* First name"
+            placeholder="First name"
             name="first-name"
             id="first-name"
-            required
           />
           <hr />
           <input
             type="text"
-            placeholder="* Last name"
+            placeholder="Last name"
             name="last-name"
             id="last-name"
-            required
           />
           <hr />
-          <input
-            type="email"
-            placeholder="* Email"
-            name="email"
-            id="email"
-            required
-          />
+          <input type="email" placeholder="Email" name="email" id="email" />
           <hr />
           <div class="password-container initial-password">
             <input
               type="password"
-              placeholder="* Password"
+              placeholder="Password"
               name="password"
               class="password"
               id="password"
-              required
             />
             <button
               type="button"
@@ -74,11 +63,10 @@
           <div class="password-container confirmation">
             <input
               type="password"
-              placeholder="* Password confirmation"
+              placeholder="Password confirmation"
               name="password-confirmation"
               class="password-confirmation"
               id="password-confirmation"
-              required
             />
             <button
               type="button"

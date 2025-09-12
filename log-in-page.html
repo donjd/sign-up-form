@@ -16,15 +16,13 @@
   </head>
   <body>
     <header>
-      <div class="menu-icon">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-      </div>
+      <button type="button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <a class="logo" href="index.html">
         d<span class="accent-1">on</span>jd
       </a>
-      <div class="profile-icon"></div>
+      <button type="button"><i class="fa-solid fa-circle-user"></i></button>
     </header>
     <main>
       <form>
@@ -38,12 +36,13 @@
               placeholder="Password"
               name="password"
               id="password"
+              class="password"
             />
             <button
               type="button"
               class="eye-container password-visibility-toggle"
             >
-              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-eye password-eye"></i>
             </button>
           </div>
         </section>
